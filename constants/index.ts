@@ -54,7 +54,7 @@ export const projectData = [
 	{
 		title: 'Udemy clone',
 		githubLink: 'https://github.com/frontend-tester02/udemy',
-		demoLink: 'https://shokh-udemy.vercel.app/en',
+		demoLink: 'https://udemy.shoky.dev/en',
 		previewImage: '/assets/udemy-clone.png',
 		description:
 			'A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.',
@@ -63,7 +63,7 @@ export const projectData = [
 	{
 		title: 'NurBlog',
 		githubLink: 'https://github.com/frontend-tester02/shokh-blog',
-		demoLink: 'https://shokh-blog.vercel.app/',
+		demoLink: 'https://shokh-blog.shoky.dev/',
 		previewImage: '/assets/blog.png',
 		description:
 			'A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.',
