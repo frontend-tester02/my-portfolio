@@ -68,7 +68,7 @@ function Hero() {
 				<Carousel
 					opts={{ align: 'end', loop: true }}
 					plugins={[Autoplay({ delay: 2000 })]}
-					className='container mx-auto w-full max-w-6xl'
+					className='container mx-auto w-full max-w-5xl'
 				>
 					<CarouselContent className='p-2'>
 						{techStack.map((item, idx) => (
