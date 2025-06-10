@@ -8,7 +8,7 @@ interface Props {
 	projects: IProject[]
 }
 
-const Page: FC<Props> = ({ projects }) => {
+const Page: React.FC<Props> = ({ projects }) => {
 	return (
 		<>
 			<TopBar
