@@ -135,10 +135,10 @@ function About() {
 			</div>
 
 			<div className='container mx-auto max-w-5xl font-serif px-4'>
-				<h1 className='text-3xl font-bold mb-4'>Let's Connect</h1>
+				<h1 className='text-3xl font-bold mb-4'>Lets Connect</h1>
 				<p className='mb-4'>
-					I'm always open to new opportunities and collaborations. Feel free to
-					reach out if you'd like to discuss a project or just say hello!
+					I am always open to new opportunities and collaborations. Feel free to
+					reach out if you would like to discuss a project or just say hello!
 				</p>
 				<Link href={'/contacts'}>
 					<Button size='lg'>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { projectsData } from '@/constants'
 import { type Project, ProjectCard } from './project-card'
 

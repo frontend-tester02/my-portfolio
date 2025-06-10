@@ -5,7 +5,7 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from '@/components/ui/carousel'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import { MdEmail, MdWork } from 'react-icons/md'
 import Autoplay from 'embla-carousel-autoplay'
