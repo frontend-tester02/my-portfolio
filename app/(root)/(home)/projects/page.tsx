@@ -7,7 +7,7 @@ interface Props {
 	projects: IProject[]
 }
 
-const Page: React.FC<Props> = ({ projects }) => {
+export default function Page({ projects }: Props) {
 	return (
 		<>
 			<TopBar
@@ -22,5 +22,3 @@ const Page: React.FC<Props> = ({ projects }) => {
 		</>
 	)
 }
-
-export default Page
