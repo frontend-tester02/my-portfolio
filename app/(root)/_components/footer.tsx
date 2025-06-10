@@ -1,8 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { Separator } from '@/components/ui/separator'
-import { GitlabIcon as GitHub, Mail, MapPin, PhoneCall } from 'lucide-react'
 
 export function Footer() {
 	return (
