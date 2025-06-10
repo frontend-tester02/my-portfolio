@@ -2,7 +2,6 @@ import TopBar from '@/components/shared/tob-bar'
 import { Footer } from '../../_components/footer'
 import { ProjectGrid } from '@/components/cards/project-grid'
 import { IProject } from '@/types'
-import { FC } from 'react'
 
 interface Props {
 	projects: IProject[]
