@@ -7,7 +7,7 @@ type Props = {
 	projects: IProject[]
 }
 
-export default function Page({ projects }: Props) {
+function Page({ projects }: Props) {
 	return (
 		<>
 			<TopBar
@@ -22,3 +22,5 @@ export default function Page({ projects }: Props) {
 		</>
 	)
 }
+
+export default Page
