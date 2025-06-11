@@ -3,11 +3,11 @@ import { Footer } from '../../_components/footer'
 import { ProjectGrid } from '@/components/cards/project-grid'
 import { IProject } from '@/types'
 
-interface Props {
+type Props = {
 	projects: IProject[]
 }
 
-function Page({ projects }: Props) {
+export default function Page({ projects }: Props) {
 	return (
 		<>
 			<TopBar
@@ -22,5 +22,3 @@ function Page({ projects }: Props) {
 		</>
 	)
 }
-
-export default Page
