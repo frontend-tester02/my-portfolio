@@ -1,5 +1,3 @@
-import { Url, UrlObject } from 'url'
-
 export interface ChildProps {
 	children: React.ReactNode
 }
