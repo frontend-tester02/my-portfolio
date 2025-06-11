@@ -37,14 +37,14 @@ function About() {
 							technologies while embracing opportunities for professional
 							growth.
 						</p>
-						<div className='flex flex-wrap items-start space-x-4 '>
-							<Button asChild className='mb-2'>
+						<div className='flex flex-wrap items-start'>
+							<Button asChild className='mb-2 mr-4'>
 								<Link href={'/contacts'}>
 									<Mail className='h-4 w-4' /> Contact Me
 								</Link>
 							</Button>
 
-							<Button variant='outline' asChild>
+							<Button variant='outline' className='mr-4 mb-2' asChild>
 								<Link
 									href={'https://github.com/frontend-tester02'}
 									target='_blank'

@@ -11,10 +11,12 @@ import {
 import { navLinks } from '@/constants'
 import { AlignCenter } from 'lucide-react'
 import Link from 'next/link'
+import { useState } from 'react'
 
 function Mobile() {
+	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<Sheet>
+		<Sheet open={isOpen} onOpenChange={setIsOpen}>
 			<SheetTrigger asChild className='md:hidden'>
 				<Button
 					size={'icon'}
@@ -26,7 +28,7 @@ function Mobile() {
 			</SheetTrigger>
 			<SheetContent side={'left'}>
 				<SheetHeader>
-					<Link href={'/'}>
+					<Link href={'/'} onClick={() => setIsOpen(false)}>
 						<h1 className='text-4xl'>shoky.dev</h1>
 					</Link>
 					<Separator />
@@ -37,6 +39,7 @@ function Mobile() {
 							href={nav.route}
 							key={nav.route}
 							className='flex h-12 cursor-pointer items-center gap-2 rounded-md px-3 transition-colors hover:bg-blue-400/20'
+							onClick={() => setIsOpen(false)}
 						>
 							<nav.icon className='size-5' />
 							<span>{nav.name}</span>
