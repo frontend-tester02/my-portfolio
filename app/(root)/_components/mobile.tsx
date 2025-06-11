@@ -24,7 +24,7 @@ function Mobile() {
 					<AlignCenter />
 				</Button>
 			</SheetTrigger>
-			<SheetContent side={'top'}>
+			<SheetContent side={'left'}>
 				<SheetHeader>
 					<Link href={'/'}>
 						<h1 className='text-4xl'>shoky.dev</h1>
