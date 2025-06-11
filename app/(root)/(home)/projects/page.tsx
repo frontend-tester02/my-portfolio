@@ -3,7 +3,7 @@ import { Footer } from '../../_components/footer'
 import { ProjectGrid } from '@/components/cards/project-grid'
 import { IProject } from '@/types'
 
-type Props = {
+interface Props {
 	projects: IProject[]
 }
 
