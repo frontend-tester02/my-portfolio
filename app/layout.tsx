@@ -3,6 +3,7 @@ import './globals.css'
 import { ChildProps } from '@/types'
 import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
 	title: 'My Protfolio',
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: ChildProps) {
 				>
 					<Toaster position='top-center' />
 					{children}
+					<Analytics />
 				</ThemeProvider>
 			</body>
 		</html>
