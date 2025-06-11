@@ -1,13 +1,9 @@
 import TopBar from '@/components/shared/tob-bar'
 import { Footer } from '../../_components/footer'
 import { ProjectGrid } from '@/components/cards/project-grid'
-import { IProject } from '@/types'
+import { projects } from '@/constants/index'
 
-type Props = {
-	projects: IProject[]
-}
-
-export default function Page({ projects }: Props) {
+export default function Page() {
 	return (
 		<>
 			<TopBar

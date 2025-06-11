@@ -1,5 +1,4 @@
 import { IProject } from '@/types'
-import { ResumeIcon } from '@radix-ui/react-icons'
 import { Contact2, FileCode2, Home, ListCollapse } from 'lucide-react'
 import { FaBlog } from 'react-icons/fa6'
 
@@ -50,7 +49,7 @@ export const techStack = [
 	},
 ]
 
-export const projectsData: IProject[] = [
+export const projects: IProject[] = [
 	{
 		id: 1,
 		title: 'Udemy clone',
