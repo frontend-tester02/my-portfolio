@@ -26,7 +26,7 @@ function About() {
 					</div>
 					<div className='md:w-2/3 font-serif'>
 						<h2 className='text-4xl font-bold mb-4'>About Me</h2>
-						<p className='text-md mb-4 text-start text-muted-foreground'>
+						<p className='text-md mb-4 text-start text-muted-foreground md:px-4'>
 							I am a Full Stack Web Developer currently based in Seoul, South
 							Korea, with a profound passion for addressing complex challenges
 							through the discipline of coding. I find great fulfillment in
@@ -37,10 +37,10 @@ function About() {
 							technologies while embracing opportunities for professional
 							growth.
 						</p>
-						<div className='items-start flex space-x-4'>
-							<Button asChild>
+						<div className='flex flex-wrap items-start space-x-4 '>
+							<Button asChild className='mb-2'>
 								<Link href={'/contacts'}>
-									<Mail className='mr-2 h-4 w-4' /> Contact Me
+									<Mail className='h-4 w-4' /> Contact Me
 								</Link>
 							</Button>
 
@@ -49,7 +49,7 @@ function About() {
 									href={'https://github.com/frontend-tester02'}
 									target='_blank'
 								>
-									<Github className='mr-2 h-4 w-4' /> GitHub
+									<Github className='h-4 w-4' /> GitHub
 								</Link>
 							</Button>
 
@@ -60,7 +60,7 @@ function About() {
 									}
 									target='_blank'
 								>
-									<Linkedin className='mr-2 h-4 w-4' /> LinkedIn
+									<Linkedin className='h-4 w-4' /> LinkedIn
 								</Link>
 							</Button>
 						</div>
