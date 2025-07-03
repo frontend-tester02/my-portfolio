@@ -57,7 +57,7 @@ export const projects: IProject[] = [
 		demoUrl: 'https://udemy.shoky.dev/en',
 		image: '/assets/udemy-clone.png',
 		description:
-			'A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.',
+			'Revolutionize e-learning with our Udemy clone. Seamlessly authenticate users, process payments, support multilingual content, and integrate AI for enhanced learning experiences',
 		technologies: [
 			'Next.js',
 			'TypeScript',
@@ -70,12 +70,12 @@ export const projects: IProject[] = [
 	},
 	{
 		id: 2,
-		title: 'NurBlog',
+		title: 'TechMemo',
 		githubUrl: 'https://github.com/frontend-tester02/shokh-blog',
 		demoUrl: 'https://shokh-blog.shoky.dev/',
 		image: '/assets/blog.png',
 		description:
-			'A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.',
+			'TechMemo is a personal tech journal by Nuriddinov Shokhrukh, where ideas meet code. Here, you’ll find insightful articles on the latest technology trends, programming tutorials, and personal reflections — crafted for developers, tech enthusiasts, and curious minds. From AI discussions to TypeScript guides, content is shared in both English and Uzbek to empower a diverse community of learners and creators.',
 		technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'CMS blog'],
 		featured: true,
 		status: 'Completed',
@@ -87,7 +87,7 @@ export const projects: IProject[] = [
 		demoUrl: 'https://seleor.shoky.dev/',
 		image: '/assets/seleor1.jpg',
 		description:
-			'A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.',
+			'Seleor is your go-to online marketplace for everything you need — from the latest tech gadgets to fashion essentials, digital tools, and everyday must-haves. Designed for simplicity and convenience, Seleor connects quality products with smart shoppers. Discover new trends, exclusive deals, and reliable service, all in one place.',
 		technologies: [
 			'Next.js',
 			'TypeScript',
