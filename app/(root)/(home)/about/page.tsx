@@ -27,15 +27,10 @@ function About() {
 					<div className='md:w-2/3 font-serif'>
 						<h2 className='text-4xl font-bold mb-4'>About Me</h2>
 						<p className='text-md mb-4 text-start text-muted-foreground md:px-4'>
-							I am a Full Stack Web Developer currently based in Seoul, South
-							Korea, with a profound passion for addressing complex challenges
-							through the discipline of coding. I find great fulfillment in
-							designing and implementing thoughtful, efficient solutions that
-							not only meet technical requirements but also contribute to
-							meaningful user experiences. Continuously committed to expanding
-							my expertise, I strive to stay at the forefront of evolving web
-							technologies while embracing opportunities for professional
-							growth.
+							Full Stack Web Developer based in Seoul, South Korea, passionate
+							about solving complex problems through coding. I enjoy building
+							efficient, user-focused solutions and continuously expand my
+							skills to stay ahead in evolving web technologies.
 						</p>
 						<div className='flex flex-wrap items-start'>
 							<Button asChild className='mb-2 mr-4'>

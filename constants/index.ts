@@ -12,6 +12,10 @@ export const navLinks = [
 
 export const techStack = [
 	{
+		title: 'JavaScript',
+		image: '/assets/javascript.svg',
+	},
+	{
 		title: 'ReactJS',
 		image: '/assets/react.svg',
 	},
@@ -19,10 +23,7 @@ export const techStack = [
 		title: 'TypeScript',
 		image: '/assets/typescript.svg',
 	},
-	{
-		title: 'JavaScript',
-		image: '/assets/javascript.svg',
-	},
+
 	{
 		title: 'TailwindCss',
 		image: '/assets/tailwind.svg',
@@ -70,12 +71,12 @@ export const projects: IProject[] = [
 	},
 	{
 		id: 2,
-		title: 'TechMemo',
+		title: 'Tech blog',
 		githubUrl: 'https://github.com/frontend-tester02/shokh-blog',
-		demoUrl: 'https://shokh-blog.shoky.dev/',
-		image: '/assets/blog.png',
+		demoUrl: 'https://tech.shoky.dev/',
+		image: '/assets/tech-blog.png',
 		description:
-			'TechMemo is a personal tech journal by Nuriddinov Shokhrukh, where ideas meet code. Here, you’ll find insightful articles on the latest technology trends, programming tutorials, and personal reflections — crafted for developers, tech enthusiasts, and curious minds. From AI discussions to TypeScript guides, content is shared in both English and Uzbek to empower a diverse community of learners and creators.',
+			'Tech blog is a personal tech journal by Nuriddinov Shokhrukh, where ideas meet code. Here, you’ll find insightful articles on the latest technology trends, programming tutorials, and personal reflections — crafted for developers, tech enthusiasts, and curious minds. From AI discussions to TypeScript guides, content is shared in both English and Uzbek to empower a diverse community of learners and creators.',
 		technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'CMS blog'],
 		featured: true,
 		status: 'Completed',

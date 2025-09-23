@@ -8,7 +8,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card'
-import { ExternalLink, Github, Star } from 'lucide-react'
+import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -48,23 +48,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 				<Image
 					src={project.image || '/placeholder.svg'}
 					alt={project.title}
-					width={400}
-					height={200}
+					width={500}
+					height={400}
 					className='w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105'
 				/>
-				{project.featured && (
-					<div className='absolute bottom-3 left-3'>
-						<Badge className='bg-yellow-500 text-white border-0'>
-							<Star className='w-3 h-3 mr-1' />
-							Featured
-						</Badge>
-					</div>
-				)}
-				<div className='absolute bottom-3 right-3'>
-					<Badge className={'bg-yellow-500 text-white border-0'}>
-						{project.status}
-					</Badge>
-				</div>
 			</div>
 
 			<CardHeader className='text-start'>

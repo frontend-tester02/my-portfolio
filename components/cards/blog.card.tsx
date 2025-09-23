@@ -59,18 +59,14 @@ function BlogCard(blog: IBlog) {
 						</div>
 						<Dot />
 						<div className='flex items-center gap-2'>
-							<Link href={`/tags/${blog.tag.slug}`}>
-								<Badge variant={'secondary'} role='button'>
-									<Tag className='me-2 size-3' />
-									{blog.tag.name}
-								</Badge>
-							</Link>
-							<Link href={`/categories/${blog.category.slug}`}>
-								<Badge variant={'outline'} role='button'>
-									<Layers2 className='me-2 size-3' />
-									{blog.category.name}
-								</Badge>
-							</Link>
+							<Badge variant={'secondary'} role='button'>
+								<Tag className='me-2 size-3' />
+								{blog.tag.name}
+							</Badge>
+							<Badge variant={'outline'} role='button'>
+								<Layers2 className='me-2 size-3' />
+								{blog.category.name}
+							</Badge>
 						</div>
 					</div>
 				</div>

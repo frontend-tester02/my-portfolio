@@ -7,13 +7,9 @@ async function Page() {
 	return (
 		<>
 			<TopBar label='Contact' />
-			<iframe
-				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27381.093809614!2d127.074304!3d37.55132105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4d713856077%3A0x169df594b1f221cc!2sSeoul%20Children&#39;s%20Grand%20Park!5e1!3m2!1sen!2skr!4v1725374618988!5m2!1sen!2skr'
-				loading='lazy'
-				className='h-96 w-full'
-			></iframe>
-			<div className='container mx-auto max-w-5xl px-4'>
-				<div className='mt-6 grid grid-cols-2 gap-4 max-md:grid-cols-1'>
+
+			<div className='container mx-auto max-w-5xl min-h-[65vh] px-4'>
+				<div className='mt-6 pt-10 grid grid-cols-2 gap-4 max-md:grid-cols-1'>
 					<div className='flex flex-col'>
 						<h1 className='font-spaceGrotesk text-4xl'>Touch base with us</h1>
 						<p className='mt-2 text-muted-foreground'>

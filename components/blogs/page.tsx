@@ -1,7 +1,7 @@
 import BlogCard from '@/components/cards/blog.card'
 import { getBlogs } from '@/service/blog.service'
 
-async function Page() {
+async function BlogPage() {
 	const blogs = await getBlogs()
 	return (
 		<>
@@ -16,4 +16,4 @@ async function Page() {
 	)
 }
 
-export default Page
+export default BlogPage

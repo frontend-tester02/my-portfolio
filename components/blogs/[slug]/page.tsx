@@ -1,9 +1,8 @@
 import { getReadingTime } from '@/lib/utils'
 import { getDetailedBlog } from '@/service/blog.service'
 import { format } from 'date-fns'
-import { ArrowRight, CalendarDays, Clock, Minus } from 'lucide-react'
+import { CalendarDays, Clock, Minus } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import parse from 'html-react-parser'
 import { Separator } from '@/components/ui/separator'
 import ShareBtns from './_components/share-btns'
@@ -75,13 +74,6 @@ async function Page({ params }: { params: { slug: string } }) {
 						<p className='line-clamp-2 text-muted-foreground'>
 							{blog.author.bio}
 						</p>
-						<Link
-							href={`/author/${blog.author.id}`}
-							className='flex items-center gap-2 underline transition-colors hover:text-blue-500'
-						>
-							<span>See all posts by this author</span>
-							<ArrowRight />
-						</Link>
 					</div>
 				</div>
 			</div>

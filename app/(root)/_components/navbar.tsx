@@ -25,7 +25,6 @@ function Navbar() {
 								pathname === nav.route && 'text-blue-400'
 							)}
 							target={nav.name === 'resume' ? '_blank' : '_self'}
-							download={nav.name === 'resume' ? 'Resume.pdf' : undefined}
 						>
 							{nav.name}
 						</Link>
