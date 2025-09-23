@@ -15,7 +15,7 @@ import { ResumeIcon } from '@radix-ui/react-icons'
 import { ProjectGrid } from '@/components/cards/project-grid'
 import { Footer } from '../../_components/footer'
 import ContactForm from '@/components/forms/contact'
-import BlogPage from '../blogs/page'
+import BlogPage from '@/components/blog/page'
 
 function Hero() {
 	const handleDownload = () => {

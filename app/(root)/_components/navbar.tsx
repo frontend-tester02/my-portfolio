@@ -19,7 +19,7 @@ function Navbar() {
 					{navLinks.map(nav => (
 						<Link
 							key={nav.route}
-							href={nav.name === 'resume' ? '/resume.pdf' : nav.route}
+							href={nav.route}
 							className={cn(
 								'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-md transition-colors',
 								pathname === nav.route && 'text-blue-400'
