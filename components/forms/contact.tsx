@@ -26,34 +26,35 @@ function ContactForm() {
 
 	function onSubmit(values: z.infer<typeof contactSchema>) {
 		setIsLoading(true)
-		const telegramBotId = process.env.NEXT_PUBLIC_TELEGRAM_BOT_API!
-		const telegramChatId = process.env.NEXT_PUBLIC_TELEGRAM_BOT_CHAT_ID!
-		const promise = fetch(
-			`https://api.telegram.org/bot${telegramBotId}/sendMessage`,
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					'cache-control': 'no-cache',
-				},
-				body: JSON.stringify({
-					chat_id: telegramChatId,
-					text: `
-                    Name: ${values.name} 
-                Email: ${values.email} 
-                Message: ${values.message},
-                `,
-				}),
-			}
-		)
-			.then(() => form.reset())
+
+		const promise = fetch('/api/contact', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'cache-control': 'no-cache',
+			},
+			body: JSON.stringify({
+				name: values.name,
+				email: values.email,
+				message: values.message,
+			}),
+		})
+			.then(async res => {
+				if (!res.ok) {
+					const err = await res.json().catch(() => ({}))
+					throw new Error(err?.error || 'Failed to send message')
+				}
+				form.reset()
+			})
 			.finally(() => setIsLoading(false))
+
 		toast.promise(promise, {
-			loading: 'Loading',
-			success: 'Successfully',
-			error: 'Error try again!',
+			loading: 'Sending...',
+			success: 'Message sent — I will reply soon!',
+			error: 'Error sending message. Try again!',
 		})
 	}
+
 	return (
 		<Form {...form}>
 			<form onSubmit={form.handleSubmit(onSubmit)} className='space-y-3'>
