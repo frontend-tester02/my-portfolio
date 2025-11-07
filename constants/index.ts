@@ -99,4 +99,41 @@ export const projects: IProject[] = [
 		featured: true,
 		status: 'Completed',
 	},
+	{
+		id: 4,
+		title: 'Signalist - Stock Tracker',
+		githubUrl: 'https://github.com/frontend-tester02/signalist-stock-tracker',
+		demoUrl: 'https://signalist.shoky.dev/',
+		image: '/assets/signalist.png',
+		description:
+			'Track real-time stock prices, get personalized alerts and explore detailed company insights.',
+		technologies: [
+			'Next.js',
+			'TypeScript',
+			'Node.js',
+			'Tailwind CSS',
+			'Better-auth',
+			'Inngest',
+		],
+		featured: true,
+		status: 'Completed',
+	},
+	{
+		id: 5,
+		title: 'Spotify Clone',
+		githubUrl: 'https://github.com/frontend-tester02/spotify',
+		demoUrl: 'https://spotify.shoky.dev/',
+		image: '/assets/spotify.png',
+		description:
+			'A modern Spotify-inspired music streaming web app. It features user authentication, playlist management, and real-time audio playback with a clean, responsive UI. ',
+		technologies: [
+			'Next.js',
+			'TypeScript',
+			'Node.js',
+			'Tailwind CSS',
+			'MongoDB',
+		],
+		featured: true,
+		status: 'Completed',
+	},
 ]
