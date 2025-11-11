@@ -5,10 +5,10 @@ interface ProjectGridProps {
 	projects: Project[]
 }
 
-export function ProjectGrid({ projects }: ProjectGridProps) {
+export function AllProjects({ projects }: ProjectGridProps) {
 	return (
 		<div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-			{projects.slice(0, 3).map(project => (
+			{projects.map(project => (
 				<ProjectCard key={project.id} project={project} />
 			))}
 		</div>

@@ -12,10 +12,10 @@ import Autoplay from 'embla-carousel-autoplay'
 import { projects, techStack } from '@/constants'
 import Image from 'next/image'
 import { ResumeIcon } from '@radix-ui/react-icons'
-import { ProjectGrid } from '@/components/cards/project-grid'
 import { Footer } from '../../_components/footer'
 import ContactForm from '@/components/forms/contact'
 import BlogPage from '@/components/blog/page'
+import { ProjectGrid } from '@/components/cards/project-grid'
 
 function Hero() {
 	const handleDownload = () => {
@@ -158,6 +158,12 @@ function Hero() {
 			</div>
 
 			<div className='mx-auto flex flex-col min-h-[40vh] max-w-5xl gap-8 text-center max-md:mt-10 px-4 mb-5'>
+				<div className='flex items-center justify-between gap-4'>
+					<h1 className='text-4xl font-bold'>Projects</h1>
+					<Link href={'/projects'} className='text-blue-600 underline text-x'>
+						Show all
+					</Link>
+				</div>
 				<ProjectGrid projects={projects} />
 			</div>
 
