@@ -10,6 +10,8 @@ export const navLinks = [
 	{ name: 'Contacts', route: '/contacts', icon: Contact2 },
 ]
 
+export const techNames = [' react, typescript']
+
 export const techStack = [
 	{
 		title: 'JavaScript',

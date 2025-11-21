@@ -78,7 +78,10 @@ function About() {
 						'TypeScript',
 						'Node.js',
 						'Express.js',
+						'Nest.js',
 						'MongoDB',
+						'Postgresql',
+						'Prisma',
 						'Rest Api',
 						'Git',
 						'GitHub',
@@ -99,19 +102,9 @@ function About() {
 				<div className='space-y-4'>
 					{[
 						{
-							year: '2024 Oct - Present',
-							title: 'Middle Full Stack Developer',
+							year: '2024 May - 2025 Oct',
+							title: 'Frontent Developer',
 							company: 'Sammi.ac',
-						},
-						{
-							year: '2024 Jan - 2024 Sep',
-							title: 'Strong Junior Developer',
-							company: 'Digital Solutions Ltd.',
-						},
-						{
-							year: '2023 Aug- 2024 Jan',
-							title: 'Junior Developer',
-							company: 'StartUp Ventures',
 						},
 					].map((job, index) => (
 						<Card key={index}>
