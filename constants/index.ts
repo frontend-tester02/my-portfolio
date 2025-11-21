@@ -18,7 +18,7 @@ export const techStack = [
 		image: '/assets/javascript.svg',
 	},
 	{
-		title: 'ReactJS',
+		title: 'React.js',
 		image: '/assets/react.svg',
 	},
 	{
@@ -31,20 +31,24 @@ export const techStack = [
 		image: '/assets/tailwind.svg',
 	},
 	{
-		title: 'NodeJs',
+		title: 'Node.js',
 		image: '/assets/node.svg',
+	},
+	{
+		title: 'Nest.js',
+		image: '/assets/NestJS.svg',
 	},
 	{
 		title: 'Sass',
 		image: '/assets/sass.svg',
 	},
 	{
-		title: 'MongoDB',
-		image: '/assets/mongodb.svg',
+		title: 'Postgresql',
+		image: '/assets/Postgresql.png',
 	},
 	{
-		title: 'Jest',
-		image: '/assets/jest.svg',
+		title: 'MongoDB',
+		image: '/assets/mongodb.svg',
 	},
 	{
 		title: 'Git',

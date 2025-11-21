@@ -141,7 +141,7 @@ function Hero() {
 						{techStack.map((item, idx) => (
 							<CarouselItem
 								key={idx}
-								className='basis-1/3 md:basis-1/4 lg:basis-1/6 flex flex-col'
+								className='basis-1/3 md:basis-1/4 lg:basis-1/6 flex flex-col items-center'
 							>
 								<Image
 									src={item.image}
@@ -150,7 +150,7 @@ function Hero() {
 									height={50}
 									className='mt-2 text-muted-foreground'
 								/>
-								<p className='mt-2 text-start'>{item.title}</p>
+								<p className='mt-2'>{item.title}</p>
 							</CarouselItem>
 						))}
 					</CarouselContent>
