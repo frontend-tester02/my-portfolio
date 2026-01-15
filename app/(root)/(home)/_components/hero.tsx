@@ -20,7 +20,7 @@ import { ProjectGrid } from '@/components/cards/project-grid'
 function Hero() {
 	const handleDownload = () => {
 		const link = document.createElement('a')
-		link.href = '/resume.pdf'
+		link.href = '/resume-en.pdf'
 		link.download = 'Shokhrukh_Nuriddinov_Resume.pdf'
 		link.click()
 	}
