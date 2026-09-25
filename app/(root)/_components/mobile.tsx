@@ -12,8 +12,10 @@ import { navLinks } from '@/constants'
 import { AlignCenter } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 function Mobile() {
+	const pathname = usePathname()
 	const [isOpen, setIsOpen] = useState(false)
 	return (
 		<Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -36,7 +38,7 @@ function Mobile() {
 				<div className='mt-4 flex flex-col space-y-3'>
 					{navLinks.map(nav => (
 						<Link
-							href={nav.route}
+							href={pathname === '/' ? nav.route.slice(1) : nav.route}
 							key={nav.route}
 							className='flex h-12 cursor-pointer items-center gap-2 rounded-md px-3 transition-colors hover:bg-blue-400/20'
 							onClick={() => setIsOpen(false)}
@@ -45,6 +47,7 @@ function Mobile() {
 							<span>{nav.name}</span>
 						</Link>
 					))}
+					<Link href={pathname === '/' ? '#contact' : '/#contact'} onClick={() => setIsOpen(false)} className='primary-action'>Let’s talk ↗</Link>
 				</div>
 			</SheetContent>
 		</Sheet>

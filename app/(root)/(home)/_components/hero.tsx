@@ -1,205 +1,303 @@
 'use client'
-import { Button } from '@/components/ui/button'
+
+import { useEffect, useRef, type ReactNode } from 'react'
 import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-} from '@/components/ui/carousel'
-import { Github, Linkedin, Mail, Phone } from 'lucide-react'
-import Link from 'next/link'
-import { MdEmail, MdWork } from 'react-icons/md'
-import Autoplay from 'embla-carousel-autoplay'
-import { projects, techStack } from '@/constants'
+	ArrowDown,
+	ArrowDownToLine,
+	ArrowUpRight,
+	Code2,
+	Github,
+	Globe2,
+	Linkedin,
+	MapPin,
+	Sparkles,
+} from 'lucide-react'
 import Image from 'next/image'
-import { ResumeIcon } from '@radix-ui/react-icons'
-import { Footer } from '../../_components/footer'
+import Link from 'next/link'
+import { projects, techStack } from '@/constants'
 import ContactForm from '@/components/forms/contact'
-import BlogPage from '@/components/blog/page'
-import { ProjectGrid } from '@/components/cards/project-grid'
 
-function Hero() {
-	const handleDownload = () => {
-		const link = document.createElement('a')
-		link.href = '/resume-en.pdf'
-		link.download = 'Shokhrukh_Nuriddinov_Resume.pdf'
-		link.click()
-	}
-
+export default function Hero({ journal }: { journal: ReactNode }) {
+	const root = useRef<HTMLDivElement>(null)
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			entries =>
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible')
+						observer.unobserve(entry.target)
+					}
+				}),
+			{ threshold: 0.12 },
+		)
+		root.current
+			?.querySelectorAll('[data-reveal]')
+			.forEach(el => observer.observe(el))
+		return () => observer.disconnect()
+	}, [])
 	return (
-		<>
-			<div className='mx-auto flex justify-center min-h-[100vh] max-w-5xl gap-8 text-center '>
-				<div className='w-[700px] flex flex-col space-y-4 self-center'>
-					<h1 className='font-serif text-3xl font-bold'>
-						I am <span className='text-blue-500'>Nuriddinov Shokhrukh</span>
-					</h1>
-					<p className='text-muted-foreground'>
-						I solve problems and create captivating applications.
-					</p>
-					<p className='text-muted-foreground'>
-						I am a{' '}
-						<span className='text-blue-500'>Full Stack Web Developer</span>{' '}
-						based in Seoul, South Korea, deriving immense satisfaction from
-						solving intricate problems through the art of coding!
-					</p>
-					<div className='flex justify-center items-center gap-8'>
-						<Button type='button' size={'icon'} className='rounded-full'>
-							<Link href={'https://github.com/frontend-tester02'}>
-								<Github />
-							</Link>
-						</Button>
-						<Button type='button' size={'icon'} className='rounded-full'>
-							<Link
-								href={
-									'https://www.linkedin.com/in/shokhrukh-nuriddinov-b42283249'
-								}
-							>
-								<Linkedin />
-							</Link>
-						</Button>
-						<Button type='button' size={'icon'} className='rounded-full'>
-							<Link href={'/contacts'}>
-								<MdEmail />
-							</Link>
-						</Button>
+		<div ref={root} id='home' className='portfolio-home'>
+			<section className='intro-section portfolio-container'>
+				<div className='intro-copy'>
+					<div className='eyebrow entrance'>
+						<span className='status-dot' /> FULL STACK DEVELOPER
 					</div>
-					<div className='flex justify-center gap-4'>
-						<Button
-							variant={'outline'}
-							size={'default'}
-							className='rounded-md'
-							onClick={handleDownload}
+					<h1 className='entrance delay-1'>
+						Turning ideas
+						<br />
+						into <span className='serif-accent'>digital</span>
+						<br />
+						<span className='serif-accent'>experiences.</span>
+						<span className='heading-spark' aria-hidden='true'>
+							✳
+						</span>
+					</h1>
+					<p className='intro-description entrance delay-2'>
+						Hey, I’m <strong>Shokhrukh.</strong> A developer based in Seoul,
+						<br className='hidden lg:block' /> building thoughtful websites and
+						applications
+						<br className='hidden lg:block' /> with clean code and a little
+						curiosity.
+					</p>
+					<div className='hero-actions entrance delay-3'>
+						<a href='#work' className='primary-action'>
+							Explore my work <ArrowUpRight size={18} />
+						</a>
+						<a
+							href='/resume-en.pdf'
+							download='Shokhrukh_Nuriddinov_Resume.pdf'
+							className='secondary-action'
 						>
-							<ResumeIcon className='mr-2 h-4 w-4' /> Download CV
-						</Button>
-
-						<Link href={'/projects'}>
-							<Button size={'default'} className='rounded-md'>
-								<MdWork className='mr-2 h-4 w-4' /> Projects
-							</Button>
-						</Link>
+							<ArrowDownToLine size={17} /> Download CV
+						</a>
+					</div>
+					<div className='social-row entrance delay-3'>
+						<span>FIND ME ON</span>
+						<a
+							href='https://github.com/frontend-tester02'
+							target='_blank'
+							rel='noreferrer'
+							aria-label='GitHub'
+						>
+							<Github size={18} />
+						</a>
+						<a
+							href='https://www.linkedin.com/in/shokhrukh-nuriddinov-b42283249'
+							target='_blank'
+							rel='noreferrer'
+							aria-label='LinkedIn'
+						>
+							<Linkedin size={18} />
+						</a>
+						<span className='social-divider' />
+						<MapPin size={14} />
+						<span>Seoul, South Korea</span>
 					</div>
 				</div>
-			</div>
-
-			<div className='mx-auto flex flex-col justify-center  max-w-5xl gap-8 text-center max-md:mt-20 px-4 mb-20'>
-				<div className='mb-8 flex flex-col md:flex-row items-center gap-8'>
-					<div className='md:w-1/3'>
+				<div className='hero-art entrance delay-2'>
+					<div className='art-grid' aria-hidden='true' />
+					<div className='orbit orbit-one' aria-hidden='true' />
+					<div className='orbit orbit-two' aria-hidden='true' />
+					<span className='art-star' aria-hidden='true'>
+						✳
+					</span>
+					<div className='portrait-frame'>
 						<Image
 							src='/portfolio.jpg'
-							alt='Your Name'
-							width={300}
-							height={300}
-							className='rounded-full'
+							alt='Shokhrukh Nuriddinov'
+							fill
+							priority
+							sizes='(max-width: 768px) 75vw, 360px'
+							className='portrait-image'
 						/>
-					</div>
-					<div className='md:w-2/3 font-serif'>
-						<h2 className='text-4xl font-bold mb-4'>About Me</h2>
-						<p className='text-md mb-4 text-start text-muted-foreground md:px-4'>
-							Full Stack Web Developer based in Seoul, South Korea, passionate
-							about solving complex problems through coding. I enjoy building
-							efficient, user-focused solutions and continuously expand my
-							skills to stay ahead in evolving web technologies.
-						</p>
-						<div className='flex flex-wrap items-start'>
-							<Button asChild className='mb-2 mr-4'>
-								<Link href={'/contacts'}>
-									<Mail className='h-4 w-4' /> Contact Me
-								</Link>
-							</Button>
-
-							<Button variant='outline' className='mr-4 mb-2' asChild>
-								<Link
-									href={'https://github.com/frontend-tester02'}
-									target='_blank'
-								>
-									<Github className='h-4 w-4' /> GitHub
-								</Link>
-							</Button>
-
-							<Button variant='outline' asChild>
-								<Link
-									href={
-										'https://www.linkedin.com/in/shokhrukh-nuriddinov-b42283249'
-									}
-									target='_blank'
-								>
-									<Linkedin className='h-4 w-4' /> LinkedIn
-								</Link>
-							</Button>
+						<div className='portrait-caption'>
+							<span>Shokhrukh Nuriddinov</span>
+							<span>Developer & problem solver</span>
 						</div>
 					</div>
+					<div className='floating-note code-note'>
+						<span className='note-icon'>
+							<Code2 size={21} />
+						</span>
+						<div>
+							Built with purpose.
+							<small>From the first pixel to the last line.</small>
+						</div>
+					</div>
+					<div className='floating-note location-note'>
+						<Globe2 size={18} />
+						<span>
+							Based in Seoul <span aria-hidden='true'>↗</span>
+						</span>
+					</div>
+					<span className='art-coordinate'>37.5665° N · 126.9780° E</span>
 				</div>
-			</div>
-
-			<div className='w-full bg-secondary mb-20'>
-				<Carousel
-					opts={{ align: 'end', loop: true }}
-					plugins={[Autoplay({ delay: 2000 })]}
-					className='container mx-auto w-full max-w-5xl'
-				>
-					<CarouselContent className='p-2'>
-						{techStack.map((item, idx) => (
-							<CarouselItem
-								key={idx}
-								className='basis-1/3 md:basis-1/4 lg:basis-1/6 flex flex-col items-center'
-							>
-								<Image
-									src={item.image}
-									alt={item.title}
-									width={50}
-									height={50}
-									className='mt-2 text-muted-foreground'
-								/>
-								<p className='mt-2'>{item.title}</p>
-							</CarouselItem>
+				<div className='hero-bottom'>
+					<span>GOOD DESIGN. CLEAN CODE. REAL IMPACT.</span>
+					<a href='#work'>
+						Scroll to explore <ArrowDown size={14} />
+					</a>
+				</div>
+			</section>
+			<section className='stack-strip' aria-label='Technology stack'>
+				<div className='portfolio-container stack-inner'>
+					<span className='stack-label'>
+						MY EVERYDAY
+						<br />
+						<strong>TOOLKIT</strong>
+					</span>
+					<div className='stack-items'>
+						{techStack.slice(0, 6).map(tech => (
+							<div key={tech.title}>
+								<Image src={tech.image} alt='' width={25} height={25} />
+								<span>{tech.title}</span>
+							</div>
 						))}
-					</CarouselContent>
-				</Carousel>
-			</div>
-
-			<div className='mx-auto flex flex-col min-h-[40vh] max-w-5xl gap-8 text-center max-md:mt-10 px-4 mb-5'>
-				<div className='flex items-center justify-between gap-4'>
-					<h1 className='text-4xl font-bold'>Projects</h1>
-					<Link href={'/projects'} className='text-blue-600 underline text-x'>
-						Show all
-					</Link>
-				</div>
-				<ProjectGrid projects={projects} />
-			</div>
-
-			<div className='mx-auto flex flex-col min-h-[40vh] max-w-5xl gap-8 max-md:mt-10 px-4 mb-5'>
-				<BlogPage />
-			</div>
-
-			<div className='container mx-auto max-w-5xl px-4 pt-10 pb-5'>
-				<div className='mt-6 grid grid-cols-2 gap-4 max-md:grid-cols-1'>
-					<div className='flex flex-col'>
-						<h1 className='font-spaceGrotesk text-4xl'>Touch base with me</h1>
-						<p className='mt-2 text-muted-foreground'>
-							We are here to help you. If you have any questions, feel free to
-							contact me.
-						</p>
-
-						<div className='mt-12 flex items-center gap-3'>
-							<Mail className='size-4' />
-							<p className='text-sm'>shokhrukhnuriddinov@gmail.com</p>
-						</div>
-						<div className='flex items-center gap-2'>
-							<Phone className='size-4' />
-							<p className='text-sm'>+82 10 2115 4633</p>
-						</div>
 					</div>
-
+				</div>
+			</section>
+			<section
+				id='about'
+				className='about-section portfolio-container'
+				data-reveal
+			>
+				<div className='about-heading'>
+					<p className='eyebrow'>01 / THE PERSON BEHIND THE CODE</p>
+					<h2>
+						Curious mind.
+						<br />
+						<span className='serif-accent'>Builder at heart.</span>
+					</h2>
+					<Sparkles size={40} strokeWidth={1} />
+				</div>
+				<div className='about-copy'>
+					<p>
+						I’m Shokhrukh, a full stack developer who enjoys connecting
+						thoughtful design with practical engineering.
+					</p>
+					<p>
+						From intuitive interfaces to the systems behind them, I build
+						efficient, user-focused experiences. Based in Seoul, I’m always
+						exploring new technologies and finding better ways to solve
+						interesting problems.
+					</p>
+					<h3 className='mb-3 text-lg'>Skills & tools</h3><div className='project-tags'>{['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Sass', 'TypeScript', 'Express.js', 'Nest.js', 'MongoDB', 'PostgreSQL', 'Prisma', 'REST API', 'Git', 'GitHub', 'Vercel', 'Postman', 'JWT', 'NextAuth', 'Claude.ai', 'Cursor', 'Codex', 'ChatGPT', 'Antigravity'].map(skill => <span key={skill}>{skill}</span>)}</div><div className='experience-row'>
+						<h3>Frontend Developer · Sammi agency</h3>
+						<p><time dateTime='2023-09'>Sep 2023</time> – <time dateTime='2026-03'>March 2026</time></p>
+					</div>
+				</div>
+			</section>
+			<section
+				id='work'
+				className='portfolio-container work-section'
+				data-reveal
+			>
+				<div className='section-heading'>
 					<div>
-						<h1 className='mb-2 font-spaceGrotesk text-4xl'>Contact form</h1>
+						<p className='eyebrow'>02 / SELECTED WORK</p>
+						<h2>
+							A few things I’ve <span className='serif-accent'>built.</span>
+						</h2>
+					</div>
+					<span className='text-link'>{projects.length} projects</span>
+				</div>
+				<div className='selected-projects'>
+					{projects.map(
+						(project, index) => (
+							<article className='work-card' key={project.id}>
+								<a
+									href={project.demoUrl}
+									target='_blank'
+									rel='noreferrer'
+									className={`work-image work-image-${index}`}
+									aria-label={`Open ${project.title} live demo`}
+								>
+									<Image
+										src={project.image}
+										alt={`${project.title} website preview`}
+										width={700}
+										height={440}
+										sizes='(max-width: 640px) 90vw, 45vw'
+									/>
+									<span className='project-launch'>
+										<ArrowUpRight size={20} />
+									</span>
+								</a>
+								<div className='work-meta'>
+									<span>0{index + 1} / WEB APPLICATION</span>
+									<a
+										href={project.githubUrl}
+										target='_blank'
+										rel='noreferrer'
+										aria-label={`${project.title} source code`}
+									>
+										<Github size={17} />
+									</a>
+								</div>
+								<h3>
+									<a href={project.demoUrl} target='_blank' rel='noreferrer'>
+										{project.title}
+									</a>
+								</h3>
+								<p className='work-description'>{project.description}</p>
+								<div className='project-tags'>
+									{project.technologies.slice(0, 3).map(tech => (
+										<span key={tech}>{tech}</span>
+									))}
+								</div>
+							</article>
+						),
+					)}
+				</div>
+			</section>
+			<section id='blogs' className='portfolio-container journal-section' data-reveal>
+				<div>
+					<p className='eyebrow'>03 / NOTES & IDEAS</p>
+					<h2>
+						Learning. Building. <span className='serif-accent'>Sharing.</span>
+					</h2>
+					<p>
+						Thoughts on web development, technology, and things I learn along
+						the way.
+					</p>
+				</div>
+				{journal}
+			</section>
+			<section id='contact' className='contact-section' data-reveal>
+				<div className='portfolio-container contact-grid'>
+					<div>
+						<p className='eyebrow'>04 / LET’S CONNECT</p>
+						<h2>
+							Have something
+							<br />
+							<span className='serif-accent'>in mind?</span>
+							<span className='contact-star' aria-hidden='true'>
+								✳
+							</span>
+						</h2>
+						<p>
+							I’d love to hear about it. Let’s make something great together.
+						</p>
+						<a
+							href='mailto:shokhrukhnuriddinov@gmail.com'
+							className='contact-email'
+						>
+							shokhrukhnuriddinov@gmail.com <ArrowUpRight size={18} />
+						</a><a href='tel:+821021154633' className='contact-email'>+82 10 2115 4633</a>
+					</div>
+					<div className='contact-form-panel'>
+						<h3>Say hello.</h3>
 						<ContactForm />
 					</div>
 				</div>
-			</div>
-
-			<Footer />
-		</>
+			</section>
+			<footer className='portfolio-container portfolio-footer'>
+				<Link href='/' className='brand'>
+					shoky<span>.</span>dev
+				</Link>
+				<span>© {new Date().getFullYear()} Shokhrukh Nuriddinov</span>
+				<a href='#home'>Back to top ↑</a>
+			</footer>
+		</div>
 	)
 }
-
-export default Hero

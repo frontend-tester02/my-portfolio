@@ -66,7 +66,8 @@ function ContactForm() {
 							<FormControl>
 								<Textarea
 									className='h-32 resize-none'
-									placeholder={'Ask question or just say Hi'}
+									aria-label='Your message'
+									placeholder={'Tell me about your idea…'}
 									{...field}
 									disabled={isLoading}
 								/>
@@ -84,6 +85,9 @@ function ContactForm() {
 						<FormItem>
 							<FormControl>
 								<Input
+									aria-label='Email address'
+									type='email'
+									autoComplete='email'
 									placeholder={'Email address'}
 									{...field}
 									disabled={isLoading}
@@ -101,6 +105,8 @@ function ContactForm() {
 						<FormItem>
 							<FormControl>
 								<Input
+									aria-label='Your name'
+									autoComplete='name'
 									placeholder={'Your name'}
 									{...field}
 									disabled={isLoading}

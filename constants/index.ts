@@ -3,11 +3,11 @@ import { Contact2, FileCode2, Home, ListCollapse } from 'lucide-react'
 import { FaBlog } from 'react-icons/fa6'
 
 export const navLinks = [
-	{ name: 'Home', route: '/', icon: Home },
-	{ name: 'About', route: '/about', icon: ListCollapse },
-	{ name: 'Projects', route: '/projects', icon: FileCode2 },
-	{ name: 'Blogs', route: '/blogs', icon: FaBlog },
-	{ name: 'Contacts', route: '/contacts', icon: Contact2 },
+	{ name: 'Home', route: '/#home', icon: Home },
+	{ name: 'About', route: '/#about', icon: ListCollapse },
+	{ name: 'Projects', route: '/#work', icon: FileCode2 },
+	{ name: 'Blogs', route: '/#blogs', icon: FaBlog },
+	{ name: 'Contact', route: '/#contact', icon: Contact2 },
 ]
 
 export const techNames = [' react, typescript']
